@@ -1,4 +1,4 @@
-package br.edu.ifsuldeminas.mch.todolist.domain;
+package br.edu.ifsuldeminas.mch.tarefas.domain;
 
 public class Task {
     private Integer id;
@@ -33,5 +33,16 @@ public class Task {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    private String getActivityString(){
+
+        return active ? "Ativa" : "Realizada";
+    }
+
+    @Override
+    public String toString() {
+       String formatted = String.format("%s - %s", this.getDescription())
+       return formatted;
     }
 }
